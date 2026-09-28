@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "705603900911",
+    "project_id": "manapantalu-b04ac",
+    "storage_bucket": "manapantalu-b04ac.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705603900911:android:6e31df80b5f482741f921a",
+        "android_client_info": {
+          "package_name": "com.manapantalu.web"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBnqnn7KiPNiFgG3Wj0piHpWp8GsdsmXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
