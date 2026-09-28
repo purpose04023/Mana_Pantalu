@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/mana-pantalu/"
+title = "Mana Pantalu"
+description = "A Telugu-first Android farming companion for small farmers in Andhra Pradesh and Telangana, with crop diagnosis, weather, tips, crop reminders, and voice guidance."
+version = "1.0.0"
+id = "artifacts/mana-pantalu"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/mana-pantalu/" ]
+localPort = 20166
+
+[services.development]
+run = "pnpm --filter @workspace/mana-pantalu run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mana-pantalu", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/mana-pantalu", "run", "serve" ]
+
+[services.env]
+PORT = "20166"
+BASE_PATH = "/mana-pantalu/"
