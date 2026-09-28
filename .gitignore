@@ -1,0 +1,67 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+ephemeral/
+
+# Android
+android/app/debug
+android/app/profile
+android/app/release
+android/app/src/main/assets/PUBLIC
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+android/key.jks
+android/app/key.jks
+*.keystore
+android/.gradle/
+
+# iOS / macOS
+ios/DerivedData/
+ios/Runner/GeneratedPluginRegistrant.h
+ios/Runner/GeneratedPluginRegistrant.m
+ios/Pods/
+ios/Podfile.lock
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Flutter/flutter_assets/
+ios/ServiceDefinitions.json
+
+# Environment
+env.json
+.env
+
+# Self-created tools cache
+/home/jules/self_created_tools/__pycache__/

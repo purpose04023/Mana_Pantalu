@@ -1,0 +1,12 @@
+[
+  {"name_en": "Guntur", "name_te": "గుంటూరు", "lat": 16.3067, "lon": 80.4365},
+  {"name_en": "Krishna", "name_te": "కృష్ణా", "lat": 16.1809, "lon": 81.1303},
+  {"name_en": "Kurnool", "name_te": "కర్నూలు", "lat": 15.8281, "lon": 78.0373},
+  {"name_en": "Anantapur", "name_te": "అనంతపురం", "lat": 14.6819, "lon": 77.6006},
+  {"name_en": "East Godavari", "name_te": "తూర్పు గోదావరి", "lat": 16.9891, "lon": 82.2475},
+  {"name_en": "West Godavari", "name_te": "పశ్చిమ గోదావరి", "lat": 16.7107, "lon": 81.0952},
+  {"name_en": "Warangal", "name_te": "వరంగల్", "lat": 17.9689, "lon": 79.5941},
+  {"name_en": "Nalgonda", "name_te": "నల్గొండ", "lat": 17.0577, "lon": 79.2684},
+  {"name_en": "Karimnagar", "name_te": "కరీంనగర్", "lat": 18.4386, "lon": 79.1288},
+  {"name_en": "Khammam", "name_te": "ఖమ్మం", "lat": 17.2473, "lon": 80.1514}
+]
