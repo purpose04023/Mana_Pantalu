@@ -1,0 +1,56 @@
+name: Build Mana Pantalu APK
+
+on:
+  push:
+    branches:
+      - replit
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out replit branch
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.26.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck mobile app
+        run: pnpm --filter @workspace/mana-pantalu run typecheck
+
+      - name: Generate Android project
+        working-directory: artifacts/mana-pantalu
+        run: pnpm exec expo prebuild --platform android --no-install
+
+      - name: Build release APK
+        working-directory: artifacts/mana-pantalu/android
+        run: ./gradlew assembleRelease
+
+      - name: Copy APK into repository
+        run: |
+          mkdir -p executables-apks
+          cp artifacts/mana-pantalu/android/app/build/outputs/apk/release/app-release.apk \
+            executables-apks/mana-pantalu-release.apk
+
+      - name: Commit APK to replit branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add executables-apks/mana-pantalu-release.apk
+          git commit -m "Build Mana Pantalu Android APK" || echo "APK unchanged"
+          git push origin HEAD:replit
